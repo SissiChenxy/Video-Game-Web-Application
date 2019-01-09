@@ -1,4 +1,4 @@
-# VideoGameWebApplication-MEAN-
+# VideoGameWebApplication
 VideoGames (MEANStack)
 
 This project was generated with Angular CLI version 1.4.9.
