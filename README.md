@@ -5,7 +5,10 @@ This project was generated with Angular CLI version 1.4.9.
 
 Initialization before running
 
-MongoDB with Data npm install -g nodemon OR npm install --save-dev nodemon npm install ng2-pagination --save npm install jquery --save
+MongoDB with Data npm install -g nodemon OR npm install --save-dev 
+nodemon npm install ng2-pagination --save 
+npm install jquery --save
+npm install express
 
 Development server => nodemon server.js
 
