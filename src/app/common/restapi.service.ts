@@ -1,11 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
-import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map'
 import "rxjs";
 
-import { Game } from './games/game';
-import { GamesJson } from './games/mock-games';
 import { Wishlist } from './wishlists/wishlist';
 import { WishlistJson } from './wishlists/mock-wishlist';
 import { Cart } from './cart/cart';

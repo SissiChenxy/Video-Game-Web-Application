@@ -1,10 +1,9 @@
+import { UserService } from './../../login/login/user.service';
 import { GamesService } from './../../games/games.service';
 import { CartEntity } from './../../common/cart/cart.entity';
 import { Component, OnInit } from '@angular/core';
-import { Subject } from 'rxjs/Subject';
-import { Game } from '../../common/games/game';
 import { CartService } from '../cart.service';
-import { UserService } from '../../login/login/user.service';
+
 @Component({
   selector: 'app-cart-list',
   templateUrl: './cart-list.component.html',

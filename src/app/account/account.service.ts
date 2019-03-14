@@ -1,6 +1,4 @@
 import { Injectable } from '@angular/core';
-
-import { NgForm } from '@angular/forms';
 import { RegistrationViewModel } from './userInfo/registration/registrationViewModel';
 import { UserService } from '../login/login/user.service';
 import { RestApiService } from '../common/restapi.service';
