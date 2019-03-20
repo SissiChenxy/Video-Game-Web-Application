@@ -19,7 +19,7 @@ export class User {
         public wishList: GameWithQuality[] = [],
         public cartWithQuality: GameWithQuality[] = [],
 
-        public history: History[] = [],
+        //public history: History[] = [],
         public paymentCard: PaymentInformation = null,
         public billingAddress: BillingAddress = null,
         public orderList: completedOrder[] = [],

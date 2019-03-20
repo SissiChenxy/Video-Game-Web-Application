@@ -14,16 +14,22 @@ export class HomeVideo3Component implements OnInit {
 
 
   game: Game;
-  // urllink: SafeResourceUrl
-  // str: string
+  
   constructor(private _restApiService: RestApiService, private sanitizer: DomSanitizer) { }
 
   ngOnInit() {
-    this.getGame();
+    this.getGameTrick();
   }
 
 getGame(): void {
   this.getGameFromDB(2)
+}
+getGameTrick(): void {
+  this._restApiService.getGamesFromDB()
+    .then(games => {
+      this.game = games[1];
+      console.log("homevideo3")
+    }) 
 }
 
 getGameFromDB(id: number):void {
@@ -31,10 +37,4 @@ getGameFromDB(id: number):void {
   .then(game => this.game = game[0])
 }
 
-// getLink(): void {
-//   this.getGame();
-//   console.log(this.game);
-//   console.log((String(this.game.video)))
-//   this.urllink = this.sanitizer.bypassSecurityTrustResourceUrl(String(this.game.video));
-//   }
 }

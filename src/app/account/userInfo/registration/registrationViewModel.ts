@@ -6,12 +6,12 @@ export class RegistrationViewModel {
     email: String;
     phone: number;
     introduction: String;
-    dop: Date;
+    //dop: Date;
     country: String;
     age: number;
     platforms: String[];
     gender: Gender;
-    photo: File
+    //photo: File
 
     constructor(firstName: String="", lastName: String="", 
                 email:String="", phone:number=123456789,

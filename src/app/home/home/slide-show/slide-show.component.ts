@@ -15,21 +15,47 @@ export class SlideShowComponent implements OnInit {
   game2: Game;
   game3: Game;
   game4: Game;
+  gameTest : Game;
   listOfGames: Game[]
   constructor(private _restApiService: RestApiService, private _homeService: HomeService) { }
 
   ngOnInit() {
+    this.getGame1();
+    this.getGame2();
+    this.getGame3();
+    this.getGame4();
     this.getGames();
-    // this.sortbyscore();
-    this.getGame();
+    
   }
   getGames(): void {
     this._restApiService.getGamesFromDB()
       .then(games => {
         this.listOfGames = games;
-        console.log(this.listOfGames)
       }) 
-
+  }
+  getGame1(): void {
+    this._restApiService.getGamesFromDB()
+      .then(games => {
+        this.game1 = games[4];
+      }) 
+  }
+  getGame2(): void {
+    this._restApiService.getGamesFromDB()
+      .then(games => {
+        this.game2 = games[2];
+      }) 
+  }
+  getGame3(): void {
+    this._restApiService.getGamesFromDB()
+      .then(games => {
+        this.game3 = games[5];
+      }) 
+  }
+  getGame4(): void {
+    this._restApiService.getGamesFromDB()
+      .then(games => {
+        this.game4 = games[6];
+      }) 
   }
 
   sortbyscore(): void {
@@ -46,32 +72,32 @@ export class SlideShowComponent implements OnInit {
     });
 
     this.listOfGames = sortedArray.reverse();
-    this.game1 = this.listOfGames[0]
   }
 
 
   getGame(): void {
-    // this.game1 = this.listOfGames[0]
-    // this.game2 = this.listOfGames[1]
-    this.getGame1FromDB(0)
-    this.getGame2FromDB(1)
-    this.getGame3FromDB(9)
-    this.getGame4FromDB(3)
+    // this.getGame1FromDB(0)
+    // this.getGame2FromDB(1)
+    // this.getGame3FromDB(9)
+    // this.getGame4FromDB(3)
+    //this.game1 = this.listOfGames[2];
   }
 
   getGame1FromDB(id: number):void {
     this._restApiService.getGameFormDB(id)
-    .then(game => this.game1 = game[0])
+    .then(game => console.log("game 0 here :"+game[0]))
   }
-  getGame2FromDB(id: number) :void {
+  getGame2FromDB(id: number):void {
     this._restApiService.getGameFormDB(id)
-    .then(game => this.game2 = game[0])
+    .then(game => this.game2 = game)
+    
+    console.log(this.game2)
   }
-  getGame3FromDB(id: number) :void {
+  getGame3FromDB(id: number):void {
     this._restApiService.getGameFormDB(id)
     .then(game => this.game3 = game[0])
   }
-  getGame4FromDB(id: number) :void {
+  getGame4FromDB(id: number):void {
     this._restApiService.getGameFormDB(id)
     .then(game => this.game4 = game[0])
   }

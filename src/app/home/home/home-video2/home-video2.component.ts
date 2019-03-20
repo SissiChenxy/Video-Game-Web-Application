@@ -19,11 +19,18 @@ export class HomeVideo2Component implements OnInit {
   constructor(private _restApiService: RestApiService, private sanitizer: DomSanitizer) { }
 
   ngOnInit() {
-    this.getGame();
+    this.getGameTrick();
   }
 
 getGame(): void {
   this.getGameFromDB(1)
+}
+getGameTrick(): void {
+  this._restApiService.getGamesFromDB()
+    .then(games => {
+      this.game = games[9];
+    }) 
+    console.log("homevideo2")
 }
 
 getGameFromDB(id: number):void {

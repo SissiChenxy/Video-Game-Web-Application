@@ -16,8 +16,6 @@ export class GamesProfileComponent implements OnInit {
   }
 
   constructor() {
-    // this.selectedGame = new Game("id", "scorePhrase", "title", "url", "platform", "score",
-    //                             "genre", "editorsChoice", "Year", "Month", "Day", "price");
   }
 
   ngOnInit() {

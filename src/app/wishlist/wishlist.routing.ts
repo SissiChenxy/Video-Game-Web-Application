@@ -7,7 +7,7 @@ import { AuthguardGuard } from '../login/login/authguard.guard';
 const routes: Routes = [
     {
         path: 'wishlist',
-        // canActivate: [AuthguardGuard],
+        canActivate: [AuthguardGuard],
         component: WishlistListComponent
     }
 ]

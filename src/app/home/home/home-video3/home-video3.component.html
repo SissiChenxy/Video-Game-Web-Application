@@ -20,7 +20,7 @@
     <div class="col-md-6 nopadding b-padding">
       <a>
         <div class="square img_1-1 home-block" routerLink="../games/detail/{{game.id}}">
-          <div class="text">{{game.title}}</div>
+          <div class="text">Title:{{game.title}}</div>
         </div>
       </a>
       <a>
@@ -31,12 +31,12 @@
       <!-- 2nd row verticaly centered images in square columns -->
       <a>
         <div class="square img_2-1 home-block" routerLink="../games/detail/{{game.id}}">
-          <div class="text">{{game.platform}}</div>
+          <div class="text">Platform:{{game.platform}}</div>
         </div>
       </a>
       <a>
         <div class="square img_2-2 home-block" routerLink="../games/detail/{{game.id}}">
-          <div class="text">{{ game.releaseYear }}.{{ game.releaseMonth }}.{{ game.releaseDay }}</div>
+          <div class="text">Release:{{ game.releaseYear }}.{{ game.releaseMonth }}.{{ game.releaseDay }}</div>
         </div>
       </a>
     </div>

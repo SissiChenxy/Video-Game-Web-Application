@@ -2,15 +2,12 @@ export class Game {
     id: Number;
     title: String;
     price: Number;
-    url: String;
     platform: String;
     score: String;
-    scorePhrase: String;
     genre: String;
     releaseYear: String;
     releaseMonth: String;
     releaseDay: String;
-    editorsChoice: String;
     img: String;
     img1: String;
     img2: String;
@@ -19,13 +16,10 @@ export class Game {
     video: String;
 
     constructor(id: Number,
-                scorePhrase: String,
                 title: String,
-                url: String,
                 platform: String,
                 score: String,
                 genre: String,
-                editorsChoice: String,
                 releaseYear: String,
                 releaseMonth: String,
                 releaseDay: String,
@@ -37,13 +31,10 @@ export class Game {
                 img4: String,
                 video: String) {
         this.id = id;
-        this.scorePhrase = scorePhrase;
         this.title = title;
-        this.url = url;
         this.platform = platform;
         this.score = score;
         this.genre = genre;
-        this.editorsChoice = editorsChoice;
         this.releaseYear = releaseYear;
         this.releaseMonth = releaseMonth;
         this.releaseDay = releaseDay;

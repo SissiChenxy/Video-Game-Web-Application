@@ -2,11 +2,6 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map'
 import "rxjs";
-
-import { Wishlist } from './wishlists/wishlist';
-import { WishlistJson } from './wishlists/mock-wishlist';
-import { Cart } from './cart/cart';
-import { CartJson } from './cart/mock-cart';
 import { User } from '../signup/signup';
 
 @Injectable()
@@ -49,13 +44,5 @@ export class RestApiService {
     getGameFormDB(id: number) {
       return this._http.get("/database/games/"+id)
       .map(data => data.json()).toPromise()
-    }
-
-    getGamesOfWishList(): Wishlist[] {
-        return WishlistJson;
-    }
-
-    getGamesOfCart(): Cart[] {
-        return CartJson;
     }
 }

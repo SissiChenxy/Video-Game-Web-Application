@@ -115,7 +115,7 @@ router.get('/games', (req, res) => {
             });
     });
 });
-// Get Single User
+// Get Single Game
 router.get('/games/:id', (req, res) => {
     console.log("Server > GET '/games' single user", req.params.id)
     connection((db) => {
@@ -132,7 +132,7 @@ router.get('/games/:id', (req, res) => {
             });
     });
 });
-// Update User
+// Update Game
 router.put('/games/:id', (req, res) => {
     console.log("Server > PUT '/games/:id' > id", req.body)
     connection((db) => {
